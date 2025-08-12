@@ -11,6 +11,7 @@ find_package(rclcpp REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(visualization_msgs REQUIRED)
 
 # Create obstacle_masking library
 add_library(obstacle_masking STATIC
@@ -42,6 +43,7 @@ ament_target_dependencies(costmap_generator_node
   nav_msgs
   sensor_msgs
   geometry_msgs
+  visualization_msgs
 )
 target_compile_features(costmap_generator_node PUBLIC cxx_std_17)
 
